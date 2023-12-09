@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+main {
+  background-color: #7c7c7c;
+  width: 100%;
+}
+
+.principal {
+  background-color: #7c7c7c;
+  text-align: center;
+  border-bottom: 20px;
+}
+
+.principal img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul li {
+  margin-right: 40px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 26px;
+}
+
+ul li a:hover {
+  color: #900000;
+}
+
+.faixas {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(160deg, #170a0a 0%, #8c8282 50%, #170a0a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.faixas img {
+  height: 50px;
+  width: 50px;
+  padding: 20px;
+}
+
+.duelistas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.controladores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.iniciadores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.sentinelas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.meuCard {
+  background-color: transparent;
+  width: 27%;
+  height: 350px;
+  perspective: 1000px;
+  margin: 20px 30px 20px 30px;
+}
+
+.imagemRecortada {
+  width: 100%;
+  height: 350px;
+  object-fit: none;
+  object-position: top;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.meuCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 0.3em rgba(101, 92, 92, 0.5)
+}
+
+.frontSide,
+.frontSide::before {
+  background: linear-gradient(160deg, #000000 0%, #900000 100%);
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, #000000 0%, #900000 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.backSide p {
+  color: white;
+  text-align: justify;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  height: 40px;
+  width: 40px;
+  padding: 15px;
+  border-radius: 20%;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #7c7c7c, #000000);
+  color: white;
+}
+
+@media screen and (max-width: 490px) {
+
+  .principal img {
+    content: url('../assets/capa-mobile.png');
+  }
+
+  ul {
+    display: inline-flex;
+    padding: 5px;
+  }
+
+  ul li {
+    margin-right: 10px;
+  }
+
+  ul li a {
+    padding: 0 10px 0 10px;
+  }
+
+  .meuCard.mobile {
+    width: 95%;
+  }
+
+  .backSide p {
+    font-size: 18px;
+    padding: 30px;
+  }
+
+  .faixas {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .principal img {
+    content: url('../assets/capa-mobile.png');
+    height: 800px;
+  }
+
+  ul {
+    padding: 5px;
+    display: inline-flex;
+  }
+
+  ul li a {
+    font-size: 20px !important;
+  }
+
+  .backSide p {
+
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .meuCard {
+    width: 95% !important;
+  }
+
+  .principal img {
+    width: 100%;
+    zoom: normal;
+  }
+}
+
+@media screen and (max-width: 948px) {
+
+  .meuCard {
+    width: 40%;
+  }
+
+  ul li a {
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (max-width: 1340px) {
+
+  .backSide p {
+    font-size: 15px;
+
+  }
+}
