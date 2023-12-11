@@ -196,10 +196,6 @@ footer {
 
 @media screen and (max-width: 490px) {
 
-  .principal img {
-    content: url('../assets/capa-mobile.png');
-  }
-
   ul {
     display: inline-flex;
     padding: 5px;
@@ -211,6 +207,7 @@ footer {
 
   ul li a {
     padding: 0 10px 0 10px;
+    font-size: 14px !important;
   }
 
   .meuCard.mobile {
@@ -225,6 +222,11 @@ footer {
   .faixas {
     font-size: 20px;
   }
+
+  a img {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -237,10 +239,6 @@ footer {
   ul {
     padding: 5px;
     display: inline-flex;
-  }
-
-  ul li a {
-    font-size: 20px !important;
   }
 
   .backSide p {
@@ -266,7 +264,7 @@ footer {
   }
 
   ul li a {
-    font-size: 25px;
+    font-size: 20px;
   }
 
 }
