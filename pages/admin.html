@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Valorant</title>
+
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="principal">
+            <nav>
+                <ul>
+                    <li><a href="https://playvalorant.com/pt-br/" target="_blank">Site Oficial</a></li>
+                    <li><a href="https://playvalorant.com/pt-br/download/" target="_blank">Baixe o Jogo</a></li>
+                    <li><button class="button open-button">Newsletter</button></li>
+                </ul>
+            </nav>
+            <img src="../assets/valorant-gun-splash.jpg" alt="Valorant Gun Splash" alt="Capa valorant">
+        </div>
+        </div>
+    </header>
+
+    <dialog class="modal" id="modal">
+        <h2>Boletim de notícias</h2>
+        <p>Inscreva-se para receber notícias atualizadas sobre o Valorant!</p>
+        <p>preencha os campos:</p>
+        <form class="form" id="form" method="post">
+            <label for="nome" required>Seu nome: </label>
+            <input type="text" id="name" name="nome">
+            <label for="email" required>Seu e-mail: </label>
+            <input type="email" id="email" name="email">
+            <button class="button-modal" type="submit">Cadastrar</button>
+            <button class="button-modalC close-button">Voltar</button>
+        </form>
+    </dialog>
+
+    <dialog class="modal" id="modalEditar">
+        <h2>Boletim de notícias</h2>
+        <p>Inscreva-se para receber notícias atualizadas sobre o Valorant!</p>
+        <p>Editar usuário:</p>
+        <label for="editNome">Novo Nome:</label>
+        <input type="text" id="editNome" name="editNome">
+        <label for="editEmail">Novo E-mail:</label>
+        <input type="email" id="editEmail" name="editEmail">
+        <button class="button-modal" type="submit" id="btnSalvarEdicao">Salvar</button>
+        <button class="button-modalC close-button" onclick="fecharModalEditar()">Fechar</button>
+    </dialog>
+
+    <main>
+          <table id="tabelaAdmin">
+            <thead>
+              <tr>
+                <th>Nomes Cadastrados:</th>
+                <th>E-mail informado:</th>
+                <th>Ações ADM</th>
+              </tr>
+
+            </thead>
+            <tbody>
+        
+            </tbody>
+          </table>
+          
+    </main>
+    <footer>
+        <div>
+            <p> Redes Sociais do Valorant </p>
+            <a href="https://www.facebook.com/VALORANTbrasil/" target="_blank"> <img src="../assets/facebook-5222.png"
+                    alt="Facebook"> </a>
+            <a href="https://www.youtube.com/channel/UCgWiuB2PQIUhJgEN9No281g" target="_blank"> <img
+                    src="../assets/youtube-123.png" alt="Youtube"> </a>
+            <a href="https://www.instagram.com/valorantbrasil" target="_blank"> <img
+                    src="../assets/black-instagram-logo-3497.png" alt="Instagram"> </a>
+            <a href="https://twitter.com/valorantbrasil" target="_blank"> <img
+                    src="../assets/twitter-logo-black-outline-20846.png" alt="X"> </a>
+            <a href="https://discord.com/invite/valorant-br" target="_blank"> <img src="../assets/discord-logo-8230.png"
+                    alt="Discord">
+            </a>
+
+            <p> Desenvolvido por André Ivson</p>
+        </div>
+    </footer>
+
+    <a class="escolha" href="../index.html">Principal</a>
+    <a class="escolha" href="../pages/admin.html">Admin</a>
+
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -4,6 +4,83 @@
   font-family: 'Orbitron', sans-serif;
 }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1em;
+  max-width: 50ch;
+  border: solid 2px;
+  color: white;
+  border-radius: 15px;
+  background: linear-gradient(160deg, #000000 0%, #900000 100%);
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+
+  & > * {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+.modal::backdrop {
+  background: rgba(124, 124, 124, 0.7);
+}
+
+.modal input {
+  height: 30px;
+  width: 100%;
+  font-size: 24px;
+}
+
+body {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--gray-8);
+  background-size: cover;
+}
+
+h1 em {
+  color: var(--cyan-9);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.button {
+  border: none;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 26px;
+  background-color: transparent;
+  
+}
+
+.button:hover {
+  color: #900000;
+}
+
+.button-modal, .button-modalC {
+  border: 1px solid;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 26px;
+  background-color: transparent;
+  
+}
+
+.button-modal:hover, .button-modalC:hover {
+  color: #000;
+}
+
+form {
+  display: grid;
+  gap: 1em;
+}
+
+form input {
+  height: 2vh;
+}
+
 main {
   background-color: #7c7c7c;
   width: 100%;
@@ -187,6 +264,40 @@ a img {
   border-radius: 20%;
 }
 
+#tabelaAdmin {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tabelaAdmin th {
+  background-color: #424242;
+  text-shadow: 0,3em #000;
+}
+
+#tabelaAdmin th, #tabelaAdmin td {
+  border: 3px solid #000;
+  padding: 8px;
+  text-align: left;
+  color: white;
+}
+
+#tabelaAdmin tbody tr:hover {
+  background-color: #424242;
+}
+
+.button-table {
+  margin: 10px;
+  border: 1px solid;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 26px;
+  background-color: transparent;
+}
+
+.button-table:hover {
+  color: #900000;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -194,6 +305,13 @@ footer {
   color: white;
 }
 
+.escolha {
+  text-decoration: none;
+  border: solid 1px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 490px) {
 
   ul {
